@@ -35,7 +35,7 @@ Para correr este proyecto, necesitaras incluir las siguientes variables de entor
 ## Imagen del proyecto
 ![Screenshot from 2023-07-10 14-52-07](https://github.com/Kevin2606/nasa_api/assets/54305330/458e9520-8ba6-4632-879b-28ff9cd2d2c0)
 
-## Authors
+## Autores
 
 - Kevin Gallardo - [@Kevin2606](https://github.com/Kevin2606)
 
