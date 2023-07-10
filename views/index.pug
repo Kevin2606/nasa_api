@@ -1,0 +1,46 @@
+doctype html
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css')
+        link(rel='stylesheet' href='/css/index.css')
+        title Nasa Api
+    body
+        div.container
+            div#containerHeader
+                div#imgNasa
+                    img(src='/img/NASA_logo.png', alt='Nasa')
+                h1(style='text-align: center;') Nasa Api
+            hr
+            h2(style='text-align: center;') Asteroides
+        div.container
+            h4(style='text-align: left;') Fecha: #{fecha}
+            h4(style='text-align: left;') Cantidad: #{cantidad}
+        div(style='width: 80vw; display: flex; justify-content: center; margin: 0 auto; margin-top: 5rem;')
+            table.table.table-hover(style='text-align: center; border:1px solid black;')
+                tr.table-dark
+                    th ID
+                    th Nombre
+                    th Diametro (km)
+                    th Velocidad (km/h)
+                    th Es Peligroso
+                    th Cuerpo Orbitante
+
+                each obj in datos
+                    if obj.isDangerous == 'Si'
+                        tr.table-danger
+                            td= obj.id
+                            td= obj.name
+                            td= obj.diameter
+                            td= obj.velocity
+                            td= obj.isDangerous
+                            td= obj.orbiting_body
+                    else
+                        tr
+                            td= obj.id
+                            td= obj.name
+                            td= obj.diameter
+                            td= obj.velocity
+                            td= obj.isDangerous
+                            td= obj.orbiting_body
